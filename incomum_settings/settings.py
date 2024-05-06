@@ -84,15 +84,9 @@ WSGI_APPLICATION = 'incomum_settings.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES ={
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Incomum',
-        'USER': 'kauan',
-        'PASSWORD': 'kauan0304',
-        'HOST': 'database-1.cti66c2ko9y4.us-east-2.rds.amazonaws.com',
-        'PORT': '5432',
-    }
+    'default':dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
 
 
 # Password validation
