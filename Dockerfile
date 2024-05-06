@@ -15,4 +15,4 @@ COPY . .
 EXPOSE 8000
 
 # Command to start the server
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "Incomum3.0.wsgi"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "incomum_settings.settings.wsgi"]
