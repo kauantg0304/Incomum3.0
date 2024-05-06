@@ -91,6 +91,7 @@ DATABASES = {
         'PASSWORD': 'r7H2hiYQos1E7BhOakm9PbRN4d8PrKZQ',
         'HOST': 'postgres://kauan:r7H2hiYQos1E7BhOakm9PbRN4d8PrKZQ@dpg-coshkev79t8c73f3ejs0-a.oregon-postgres.render.com/viagem',
         'PORT': '5432',
+        pool_pre_ping=True,
     }
 }
 
