@@ -84,12 +84,18 @@ WSGI_APPLICATION = 'incomum_settings.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgres://kauan:r7H2hiYQos1E7BhOakm9PbRN4d8PrKZQ@dpg-coshkev79t8c73f3ejs0-a.oregon-postgres.render.com/viagem',
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'viagem',
+        'USER': 'kauan',
+        'PASSWORD': 'r7H2hiYQos1E7BhOakm9PbRN4d8PrKZQ',
+        'HOST': 'postgres://kauan:r7H2hiYQos1E7BhOakm9PbRN4d8PrKZQ@dpg-coshkev79t8c73f3ejs0-a.oregon-postgres.render.com/viagem',
+        'PORT': '5432',
+    }
 }
+
+# Prioritize local settings over DATABASE_URL environment variable
+DATABASES['default'].update(dj_database_url.config(conn_max_age=600))
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
