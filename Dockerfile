@@ -21,6 +21,6 @@ COPY . /app/
 
 # Expor a porta em que o aplicativo Django será executado
 EXPOSE 8000
-
+pool_pre_ping=True
 # Comando para iniciar o servidor de desenvolvimento do Django
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
