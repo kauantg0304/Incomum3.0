@@ -5,6 +5,7 @@ from incomum import views
 from django.contrib.auth.views import LogoutView
 from incomum_settings import settings
 from django.contrib.auth import views as auth_views
+from django.contrib.staticfiles.urls import staticfiles.urlspatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name='home'),
@@ -29,3 +30,7 @@ urlpatterns = [
     path('consulta_relatorio/', views.consulta_relatorio, name='consulta_relatorio'),
     path('exportar_excel/', views.exportar_excel, name='exportar_excel'),
 ]
+
+urlpatterns += staticfiles.urlspatterns()
+
+
