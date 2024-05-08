@@ -83,13 +83,13 @@ WSGI_APPLICATION = 'incomum_settings.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
+DATABASES ={
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'viagem',
+        'NAME': 'Incomum',
         'USER': 'kauan',
-        'PASSWORD': 'r7H2hiYQos1E7BhOakm9PbRN4d8PrKZQ',
-        'HOST': 'postgres://kauan:r7H2hiYQos1E7BhOakm9PbRN4d8PrKZQ@dpg-coshkev79t8c73f3ejs0-a.oregon-postgres.render.com/viagem',
+        'PASSWORD': 'kauan0304',
+        'HOST': 'database-1.cti66c2ko9y4.us-east-2.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
