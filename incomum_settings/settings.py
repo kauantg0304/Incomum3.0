@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 import mimetypes
-import django_heroku
-import dj_database_url
 
 
 mimetypes.add_type("text/css", ".css", True)
